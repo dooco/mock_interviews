@@ -1,18 +1,25 @@
-import { getApp, getApps, initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+// Import the functions you need from the SDKs you need
+import { initializeApp, getApp, getApps } from "firebase/app";
+import { getAuth} from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+
+
+
+
+
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyCGLwMLv80KluG8QlzBsUxj6SJn5EMCGLg",
+  authDomain: "prepwise-60d36.firebaseapp.com",
+  projectId: "prepwise-60d36",
+  storageBucket: "prepwise-60d36.firebasestorage.app",
+  messagingSenderId: "762422698852",
+  appId: "1:762422698852:web:9a3a8ff8eef4ecdb625071",
+  measurementId: "G-ZTLRJPKSD1"
 };
 
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+const app = !getApps.length ? initializeApp(firebaseConfig) : getApp();
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+ 
